@@ -1617,3 +1617,30 @@ body {
 .calidad img {
     width: 20%;
 }
+
+#span1{
+    color: rgb(0, 94, 156);
+}
+
+#span2{
+    color: rgb(1, 136, 7);
+}
+
+#span3{
+    color: rgb(201, 187, 0);
+}   
+
+#span4{
+    color: rgb(0, 94, 156);
+}
+.banderas{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.banderas img{
+    width: 45px;
+}
+.sslLogo{
+    width:35px;
+}

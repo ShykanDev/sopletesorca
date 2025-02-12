@@ -25,10 +25,18 @@
 <header class="barra">
     <div class="navegacion">
         <div class="dividir alinear-vertical">
+            <img class="sslLogo" src="./img/sslLogoV3.png" alt="">
             <div class="logo">
-                <a id="mainDomain" href="index.html"><span id="span1">www.</span><span id="span2">sopleteorca</span><span id="span3">.com</span></a>
+                <a id="mainDomain" href="index.html"><span id="span1">www.</span><span id="span2">soplete</span><span id="span3">orca</span><span id="span4">.com</span></a>
             </div>  
+            <div class="banderas">
+                <!-- list of images of pr br and mx  -->
+                <img src="./img/br.svg" alt="">
+                <img src="./img/pt.svg" alt="">
+                <img src="./img/mx.svg" alt="">
+            </div>
             <nav class="enlaces">
+                <a href="./index.html"><i class="fas fa-home annimate__animated animate__bounce"></i>Inicio</a>
                 <a href="./conocer.html"><i class="fas fa-info-circle annimate__animated animate__bounce"></i> Saber más</a>
                 <a href="./productos.html"><i class="fas fa-shopping-cart"></i> Productos</a>
                 <a href="./alternos.html"><i class="fas fa-boxes"></i> Productos Alternos</a>
@@ -213,14 +221,16 @@
     <script>
         // Dominios a alternar
         const domains = [
-            { span1: 'www.', span2: 'sopletesorca', span3: '.com' },
-            { span1: 'www.', span2: 'sopleteorca', span3: '.com' }
+            { span1: 'www.', span2: 'sopletes', span3: 'orca', span4: '.com' },
+            { span1: 'www.', span2: 'soplete', span3: 'orca', span4: '.com' }
         ];
 
         // Selecciona los elementos span
         const span1 = document.getElementById('span1');
         const span2 = document.getElementById('span2');
         const span3 = document.getElementById('span3');
+        const span4 = document.getElementById('span4');
+        
 
         let currentIndex = 0;
 
