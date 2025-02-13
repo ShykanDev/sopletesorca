@@ -25,7 +25,7 @@
         <div class="dividir alinear-vertical">
             <img class="sslLogo" src="./img/sslLogoV3.png" alt="">
             <div class="logo">
-                <a id="mainDomain" href="index.html"><span id="span1">www.</span><span id="span2">soplete</span><span id="span3">orca</span><span id="span4">.com</span></a>
+                    <a translate="no" id="mainDomain" href="index.html"><span id="span1">www.</span><span id="span2">soplete</span><span id="span3">orca</span><span id="span4">.com</span></a>
             </div>  
             <div class="banderas">
                 <!-- list of images of pr br and mx  -->
@@ -47,7 +47,7 @@
 
 <body>
     <div class="gtranslate_wrapper"></div>
-    <script>window.gtranslateSettings = {"default_language":"es","native_language_names":true,"detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"right","alt_flags":{"en":"usa","es":"mexico"}}</script>
+    <script>window.gtranslateSettings = {"default_language":"es","native_language_names":true,"detect_browser_language":true,"languages":["es","en","fr","pt","ja","ca","it","sv","tr","zh-CN"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"right","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     <!--Botón flotante-->
     <section>
@@ -265,6 +265,24 @@
         // Ejecuta toggleDomain cada 2 segundos (2000 ms)
         setInterval(toggleDomain, 2000);
     </script>
-</body>
+ <div id="notice" class="cookie-banner">
+    <p>Al continuar usando este sitio, aceptas nuestra política de privacidad sobre el uso de tus datos de contacto <a href="./privacy.html" style="color: rgb(50, 238, 252); font-style: italic ; text-decoration: underline;">Leer más</a></p>
+    <button id="accept-btn">Aceptar</button>
+  </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+const notice = document.getElementById("notice");
+const acceptBtn = document.getElementById("accept-btn");
+
+if (localStorage.getItem("acceptedNotice")) {
+notice.style.display = "none";
+}
+
+acceptBtn.addEventListener("click", function () {
+localStorage.setItem("acceptedNotice", "true");
+notice.style.display = "none";
+});
+});
+</script></body>
 
 </html>
