@@ -1668,3 +1668,109 @@ body {
 .sslLogo{
     width: 35px !important;
 }
+
+/* Estilos específicos para la sección de publicidad */
+.orc-ads-section {
+    padding: 4rem 2rem;
+    background-color: #f8fafc;
+    position: relative;
+    z-index: 1;
+}
+
+.orc-ads-section h2 {
+    color: #1e293b;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.orc-ads-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid rgb(100, 100, 100);
+    padding: 5rem;
+}
+
+.orc-ad-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.orc-ad-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.orc-card-icon {
+    padding: 2rem;
+    background: #f1f5f9;
+    text-align: center;
+    font-size: 3.2rem;
+    color: #1e293b;
+}
+
+.orc-ad-content {
+    padding: 2rem;
+}
+
+.orc-ad-content h3 {
+    color: #1e293b;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.orc-ad-content p {
+    color: #64748b;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    min-height: 80px;
+}
+
+.orc-ad-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    gap: 0.5rem;
+}
+
+.orc-ad-btn:hover {
+    background: #2563eb;
+}
+
+.orc-ad-btn i {
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .orc-ads-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .orc-ad-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .orc-ad-content p {
+        min-height: auto;
+    }
+}

@@ -334,101 +334,434 @@
     <!--Usos-->
     <div class="separador "></div>
 
-    <!--Más productos-->
-    <section class="contenedor ">
-        <div class="centrar-texto ">
-            <h2 class="mayus ">Productos ORCA</h2>
+    <style>
+        /* Estilos generales */
+        .products-section {
+            padding: 4rem 1.5rem;
+            background: #f8fafc;
+        }
+        
+        .products-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .product-title {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .show-all-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: #3b82f6;
+            color: white;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid transparent;
+        }
+        
+        .show-all-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+        
+        .show-all-btn i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .show-all-btn:hover i {
+            transform: translateX(3px);
+        }
+        
+        .separator {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 5rem auto;
+            max-width: 1280px;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .product-image {
+                height: 220px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .show-all-btn {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="products-section">
+        <!-- Productos ORCA -->
+        <div class="products-container">
+            <div class="section-header">
+                <h2 class="section-title">Productos ORCA</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="./mod-59.html" class="product-image">
+                        <img src="./img/mod-59-fondo.png" alt="Orca Mod-59">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title">Orca Mod-59</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="./mod-81.html" class="product-image">
+                        <img src="./img/mod-81-fondo.png" alt="Orca Mod-81">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title">Orca Mod-81</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="./mechero-bunsen.html" class="product-image">
+                        <img src="./img/mod-70-fondo.png" alt="Orca Mod-70">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title">Orca Mod-70</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="./boquilla-mecker.html" class="product-image">
+                        <img src="./img/labor-fondo.png" alt="Orca Labor">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title">Orca Labor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="./productos.html" class="show-all-btn">
+                    <i class="fas fa-box-open"></i>
+                    Mostrar todos
+                </a>
+            </div>
         </div>
-        <div class="dividir ">
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./mod-59.html ">
-                        <img src="./img/mod-59-fondo.png " alt=" ">
-                        <p>Orca Mod-59</p>
-                    </a>
-                </div>
-            </div>
 
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./mod-81.html ">
-                        <img src="./img/mod-81-fondo.png " alt=" ">
-                        <p>Orca Mod-81</p>
-                    </a>
-                </div>
-            </div>
+        <div class="separator"></div>
 
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./mechero-bunsen.html ">
-                        <img src="./img/mod-70-fondo.png " alt=" ">
-                        <p>Orca Mod-70</p>
-                    </a>
-                </div>
+        <!-- Productos alternos -->
+        <div class="products-container">
+            <div class="section-header">
+                <h2 class="section-title">Productos alternos</h2>
             </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="./soplete-8.html" class="product-image">
+                        <img src="./img/producto-index-1.png" alt="Soplete Profesional">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title">Soplete Profesional Uso Rudo</p>
+                    </div>
+                </div>
 
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./boquilla-mecker.html ">
-                        <img src="./img/labor-fondo.png " alt=" ">
-                        <p>Orca Labor</p>
+                <div class="product-card">
+                    <a href="./soplete-1.html" class="product-image">
+                        <img src="./img/producto-index-2.png" alt="Soplete una Boquilla">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
                     </a>
+                    <div class="product-info">
+                        <p class="product-title">Soplete de una Boquilla</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="./soplete-6.html" class="product-image">
+                        <img src="./img/producto-index-3.png" alt="Soplete Uso Rudo">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title">Soplete de Uso Rudo</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="./soplete-2.html" class="product-image">
+                        <img src="./img/producto-index-4.png" alt="Soplete con Manguera">
+                        <div class="product-overlay">
+                            <span class="product-title">Ver detalles <i class="fas fa-chevron-right ml-2"></i></span>
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title">Soplete con Manguera Resistente</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="centrar-texto ">
-            <a class="btn-secundario " href="./productos.html ">Mostrar todos</a>
+            <div class="btn-container">
+                <a href="./alternos.html" class="show-all-btn">
+                    <i class="fas fa-tools"></i>
+                    Mostrar todos
+                </a>
+            </div>
         </div>
     </section>
 
-    <div class="separador "></div>
-
-    <section class="contenedor ">
-        <div class="centrar-texto ">
-            <h2 class="mayus ">Productos alternos</h2>
-        </div>
-        <div class="dividir ">
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./soplete-8.html ">
-                        <img src="./img/producto-index-1.png " alt=" ">
-                        <p>Soplete Profesional Uso Rudo</p>
+    <section class="orc-ads-section">
+        <h2>Publicidad</h2>
+        <div class="orc-ads-container">
+            <!-- Card 1 -->
+            <div class="orc-ad-card">
+                <div class="orc-card-icon">
+                    <img src="https://hilerajoyeria.com/img/card-2.png" 
+                         alt="Herramientas trefilado"
+                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                </div>
+                <div class="orc-ad-content">
+                    <h3>Hilera de tungsteno</h3>
+                    <p>Herramienta profesional para trefilado de metales ferrosos y no ferrosos...</p>
+                    <a href="https://hilerajoyeria.com/" class="orc-ad-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visitar Sitio
                     </a>
                 </div>
             </div>
-
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./soplete-1.html ">
-                        <img src="./img/producto-index-2.png " alt=" ">
-                        <p>Soplete de una Boquilla</p>
+    
+            <!-- Card 2 -->
+            <div class="orc-ad-card">
+                <div class="orc-card-icon">
+                    <img src="https://etiquetastyvek.com/img/fondo_etiquetas.png" 
+                         alt="Etiquetas especiales"
+                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                </div>
+                <div class="orc-ad-content">
+                    <h3>Etiquetas Tyvek</h3>
+                    <p>Diferentes tipos, modelos y tamaños de etiquetas para usos diversos...</p>
+                    <a href="https://etiquetastyvek.com/" class="orc-ad-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Ver Catálogo
                     </a>
                 </div>
             </div>
-
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./soplete-6.html ">
-                        <img src="./img/producto-index-3.png " alt=" ">
-                        <p>Soplete de Uso Rudo</p>
+    
+            <!-- Card 3 -->
+            <div class="orc-ad-card">
+                <div class="orc-card-icon">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_914577-CBT54695091033_032023-O.webp" 
+                         alt="Productos Foredom"
+                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                </div>
+                <div class="orc-ad-content">
+                    <h3>Productos Foredom</h3>
+                    <p>Más de 30 años ofreciendo herramientas de precisión y equipos industriales...</p>
+                    <a href="https://www.foredom.com.mx/" class="orc-ad-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Conocer Más
                     </a>
                 </div>
             </div>
-
-            <div class="cuatro-partes ">
-                <div class="producto-index ">
-                    <a href="./soplete-2.html ">
-                        <img src="./img/producto-index-4.png " alt=" ">
-                        <p>Soplete con Manguera Resistente</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="centrar-texto ">
-            <a class="btn-secundario " href="./alternos.html ">Mostrar todos</a>
         </div>
     </section>
-
+    
+    <!-- CSS -->
+    <style>
+    .ads-section {
+        padding: 2rem;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+    
+    .ads-section h2 {
+        color: #333;
+        margin-bottom: 2rem;
+        font-size: 2em;
+    }
+    
+    .ads-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .ad-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        width: 300px;
+        transition: transform 0.3s ease;
+    }
+    
+    .ad-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+    
+    .ad-card h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+    
+    .ad-card p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        font-size: 0.9em;
+    }
+    
+    .ad-btn {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .ad-btn:hover {
+        background-color: #2980b9;
+    }
+    
+    @media (max-width: 768px) {
+        .ad-card {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    }
+    </style>
 
     <div class="separador "></div>
 
